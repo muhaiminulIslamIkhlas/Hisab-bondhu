@@ -21,12 +21,12 @@ class CreateInvoiceProductsTable extends Migration
             $table->double('productQuantity');
             $table->double('sellPrice');
             $table->double('totalSellprice');
-            $table->double('discount');
+            $table->double('discount')->nullable();
             $table->double('buyPrice');
-            $table->text('description');
-            $table->string('discountType');
-            $table->double('discountPercent');
-            $table->double('discountFlat');
+            $table->text('description')->nullable();
+            $table->string('discountType')->nullable();
+            $table->double('discountPercent')->nullable();
+            $table->double('discountFlat')->nullable();
             $table->timestamps();
         });
     }
